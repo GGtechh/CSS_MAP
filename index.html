@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 14.593356, lng: 100.720426},
+          zoom: 14
+        });
+        const triangleCoords = [
+        { lng:100.717430114,lat: 14.5703220370001 },
+        { lng:100.716239929,lat: 14.5790805830001 },
+        { lng:100.706886292,lat: 14.5764026650002 },
+        { lng:100.706382751,lat: 14.5793609610001 },
+        { lng:100.704742432,lat: 14.580809594 },
+        { lng:100.70613861,lat: 14.583319664 },
+        { lng:100.700210572,lat: 14.5924406060001 },
+        { lng:100.700241089,lat: 14.5972614300001 },
+        { lng:100.697402953,lat: 14.6013202670001 },
+        { lng:100.69658661,lat: 14.6042099000001 },
+        { lng:100.701011657,lat: 14.6079502110001 },
+        { lng:100.702735901,lat: 14.6138811110002 },
+        { lng:100.703102113,lat: 14.6158704770001 },
+        { lng:100.701972962,lat: 14.6176500330001 },
+        { lng:100.700073243,lat: 14.6201705930001 },
+        { lng:100.700622559,lat: 14.6226005550001 },
+        { lng:100.701988146,lat: 14.6246309790002 },
+        { lng:100.71308136,lat: 14.6251897810001 },
+        { lng:100.715268666,lat: 14.624747944 },
+        { lng:100.719658001,lat: 14.6238609990001 },
+        { lng:100.719986905938,lat: 14.6238308360194 },
+        { lng:100.722155,lat: 14.623632 },
+        { lng:100.725121,lat: 14.6233600000001 },
+        { lng:100.73003,lat: 14.6246110000001 },
+        { lng:100.738374798253,lat: 14.6267386737102 },
+        { lng:100.738380001,lat: 14.6267400000002 },
+        { lng:100.738382982172,lat: 14.6267406803569 },
+        { lng:100.742566,lat: 14.6276950000001 },
+        { lng:100.747757,lat: 14.6288799999999 },
+        { lng:100.747758704566,lat: 14.6288804524162 },
+        { lng:100.749833249,lat: 14.6294307430001 },
+        { lng:100.75089928385,lat: 14.6297136507827 },
+        { lng:100.751639863835,lat: 14.6299099639056 },
+        { lng:100.747947692,lat: 14.621549606 },
+        { lng:100.742782592,lat: 14.6120004660001 },
+        { lng:100.739295959,lat: 14.613460541 },
+        { lng:100.730972291,lat: 14.6099395760001 },
+        { lng:100.729911804,lat: 14.6064424520001 },
+        { lng:100.726821899,lat: 14.603569985 },
+        { lng:100.725608825,lat: 14.5808401100001 },
+        { lng:100.725372314,lat: 14.5702009200002 },
+        { lng:100.717430114,lat: 14.5703220370001 },
+        ];
+        const bermudaTriangle = new google.maps.Polygon({
+            paths: triangleCoords,
+            strokeColor: "#0000FF",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#1111FF",
+            fillOpacity: 0.35,
+          });
+          
+          bermudaTriangle.setMap(map)
+        
+      }
+    </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUeBCiEv_afc2EtjIr-4kestHwOdU0JL8&callback=initMap"></script>
+  </body>
+</html>
+     <!-- bermudaTriangle.setMap(map); -->
+     <!-- strokeColor: "#00FF00", -->
+     <!-- const triangleCoordss = [
+          { lng:100.751639984,lat: 14.6299102360001 },
+          { lng:100.751639943839,lat: 14.6299101450622 },
+          { lng:100.751639920402,lat: 14.6299102085081 },
+          { lng:100.751639984,lat: 14.6299102360001 },
+          ];
+          const bermudaTriangles = new google.maps.Polygon({
+              paths: triangleCoordss,
+              
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: "#FF0000",
+              fillOpacity: 0.35,
+            });
+          bermudaTriangles.setMap(map);
+          ; -->
